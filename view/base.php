@@ -41,7 +41,7 @@ require_once('../src/parametre.php');
                     </div>
                    
                     <div class="navbar-nav">
-                        <ul class="navbar-items me-auto mb-2 mb-lg-0">
+                        <ul class="navbar-items me-auto mb-2 mb-lg-0 p-0">
                             <li class="nav-item">
                                 <a class="nav-link" href="blog.php">Blog</a>
                             </li>
@@ -84,8 +84,8 @@ require_once('../src/parametre.php');
         </div>
     </footer>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="public/script/listeners.js"></script>
-    <script src="public/script/main.js"></script>
+    <script src="../public/script/listeners.js"></script>
+    <script src="../public/script/main.js"></script>
 
     <script>
         tinymce.init({
