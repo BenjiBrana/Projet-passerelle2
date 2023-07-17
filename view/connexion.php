@@ -108,7 +108,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
         </form>
         <?php } ?>
         <button class="btn btn-persoBlue btn-lg flexColumn mb-5">
-            <a href="index.php">Retour</a>
+            <a href="../index.php">Retour</a>
         </button>
     </div>
 </section>
