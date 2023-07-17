@@ -70,4 +70,5 @@ $title = "Accueil";
         </div>
     </section>
 </body>
+
 </html>
