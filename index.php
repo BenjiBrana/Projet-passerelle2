@@ -44,7 +44,7 @@ $title = "Accueil";
     </header>
 <section class="container">
 
-    <h2>Bonjour et Bienvenu</h2>
+    <h2>Bonjour et Bienvenue</h2>
     <p>
         Ce blog vous montre les bénéfices pour vous de changer votre mode de paiement actuel par cartes-cadeaux.
         <br><br>
