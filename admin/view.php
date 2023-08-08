@@ -22,7 +22,7 @@ if (!empty($_GET['id'])) {
 ?>
 
         <div class="container my-5 border">
-            <h1 class="my-5"><strong>Visualiser article</strong></h1>
+            <h1 class="my-5"><strong>VISUALISER L'ARTICLE</strong></h1>
             <div class="flexColumn w-100">
                 <div class="card flex w-100 p-3 ">
                     <div class="my-4">

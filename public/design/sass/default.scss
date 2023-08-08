@@ -202,6 +202,10 @@ hr {
     width: 75vw;
 }
 
+.btnAccueil{
+    margin-top: 0;
+}
+
 .card {
     width: 70%;
     background: $persoWhite;
@@ -331,6 +335,9 @@ tr {
 }
 
 @media only screen and (max-width: 800px) {
+    .container h2{
+        font-size: 3rem;
+    }
     .card-systeme {
         width: 100%;
     }
@@ -385,7 +392,7 @@ tr {
     //menu
     .navbar {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         :nth-child(1){
             order: 1;
@@ -412,6 +419,7 @@ tr {
         transform: translateX(110%);
         transition: all 0.5s ease-in-out;
         justify-content: start;
+        padding-left: 0;
         :nth-child(1){
             order: 1;
             flex: 0;

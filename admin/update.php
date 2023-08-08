@@ -85,7 +85,7 @@ if (!empty($_POST)) {
 }
 ?>
 <div class="container my-5">
-    <h1 class="text-center my-5"><strong>Modifier l'article</strong></h1>
+    <h1 class="text-center my-5"><strong>MODIFIER L'ARTICLE</strong></h1>
     <div class="flexColumn w-100">
         <div class="card flex w-100 p-3 text-center">
             <div class="my-4">

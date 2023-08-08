@@ -76,7 +76,7 @@ function verifier($data)
 
 
 <div class="container flexColumn gap-5 w-100 border">
-    <h1 class="text-center my-5 "><strong>Ajouter un article</strong></h1>
+    <h1 class="text-center my-5 "><strong>AJOUTER UN ARTICLE</strong></h1>
     <hr class="w-50">
     <form class="container flexCenter mt-5 w-75 text-center" action="ajouter.php" role="form" method="post" enctype="multipart/form-data">
         <label for="name">Titre de l'article:</label>
@@ -88,7 +88,7 @@ function verifier($data)
         <div class=" mx-auto d-block text-center flexColumn pt-5 w-75">
             <label for="image">Sélectionner une nouvelle image:</label>
             <br>
-            <input type="file" id="image" name="image">
+            <input class="form-control" type="file" id="image" name="image">
             <span><?php echo $imageError; ?></span>
         </div>
         <div class="form-actions flexRow pb-5">

@@ -67,16 +67,15 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
     }
 }
 ?>
-<section>
+
     <?php if (isset($_SESSION['connect'])) {
 
 
         header('location: blog.php');
         exit();
     } else { ?>
-
 <section class="container flexCenter">
-    <div class="card-systeme border border-dark my-2 mx-auto flexColumn">
+    <div class="card-systeme border my-2 mx-auto flexColumn">
         <div class="card-image card-image-connexion">
         </div>
         <h2 class="card-heading text-center">
@@ -99,7 +98,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
             </div>
 
             <div class="action flexColumn">
-                <button type="submit" class="action-button">S'identifier</button>
+                <button type="submit" class="action-button btn">S'identifier</button>
             </div>
             <label id="option">
                 <input type="checkbox" name="auto" checked />

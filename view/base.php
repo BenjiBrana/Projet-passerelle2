@@ -38,8 +38,7 @@ require_once('../src/parametre.php');
                     </div>
                     <div class="navbarLogo">
                         <img class="logo" src="../public/assets/img/Logo.png" alt="Logo">
-                    </div>
-                   
+                    </div>             
                     <div class="navbar-nav">
                         <ul class="navbar-items me-auto mb-2 mb-lg-0 p-0">
                             <li class="nav-item">
