@@ -67,8 +67,7 @@
         </div>
     </footer>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="../public/script/listeners.js"></script>
-    <script src="../public/script/main.js"></script>
+    <script src="../public/script/menu.js"></script>
 </body>
 
 </html>

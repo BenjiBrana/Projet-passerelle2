@@ -65,7 +65,6 @@ $title = "Accueil";
     <footer class="footer mt-auto py-3 ">
         <div class="container">
             <p>A.R.C.C | &copy; <?php echo date('Y') ?> </p>
-
         </div>
     </footer>
 </body>

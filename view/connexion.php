@@ -36,7 +36,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
         if ($emailVerification['testEmail'] != 1) {
 
-            header('location: connexion.php?error=1&message=Impossible de vous authentifier correctement.');
+            header('location: connexion.php?error=1&message=Impossible de vous authentifier correctement, une erreur est présente.');
             exit();
         }
     }
@@ -84,7 +84,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
         <?php if (isset($_GET['error'])) {
 
             if (isset($_GET['message'])) {
-                echo '<div class="alert error">' . htmlspecialchars($_GET['message']) . '</div>';
+                echo '<div class="alert error red">' . htmlspecialchars($_GET['message']) . '</div>';
             }
         } ?>
         <form class="card-form flexColumn p2" method="post" action="connexion.php">
@@ -98,7 +98,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
             </div>
 
             <div class="action flexColumn">
-                <button type="submit" class="action-button btn">S'identifier</button>
+                <button type="submit" class="action-button btn btn-lg btn-success p-4">S'identifier</button>
             </div>
             <label id="option">
                 <input type="checkbox" name="auto" checked />

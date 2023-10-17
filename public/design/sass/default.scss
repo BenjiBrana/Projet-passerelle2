@@ -98,6 +98,12 @@ b {
     padding-right: 0.5rem;
 }
 
+.red {
+    background: rgba(248, 66, 66, 0.8);
+    width: 100%;
+    text-align: center;
+}
+
 .header {
     @include flex();
     margin-bottom: 6rem;
