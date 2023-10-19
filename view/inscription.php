@@ -1,66 +1,51 @@
 <?php
 session_start();
-
 $title = "Inscription";
-
 require_once('../src/parametre.php');
-
 $errors = [];
 
 if (isset($_SESSION['connect'])) {
     header('location: blog.php');
     exit();
 }
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $first_name = htmlspecialchars($_POST['first_name']);
     $last_name = htmlspecialchars($_POST['last_name']);
     $email = htmlspecialchars($_POST['email']);
     $password = htmlspecialchars($_POST['password']);
     $confirm_password = htmlspecialchars($_POST['confirm_password']);
-
     if (empty($first_name) || empty($last_name) || empty($email) || empty($password) || empty($confirm_password)) {
         $errors[] = "Tous les champs sont obligatoires.";
     }
-
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = "Adresse email invalide.";
     }
-
     if ($password !== $confirm_password) {
         $errors[] = "Les mots de passe ne correspondent pas.";
     }
-
     if (count($errors) === 0) {
         require_once('../src/bdd.php');
-
         $req = $bdd->prepare('SELECT COUNT(*) as testEmail FROM users WHERE email = ?');
         $req->execute([$email]);
-
         while ($emailVerification = $req->fetch()) {
             if ($emailVerification['testEmail'] != 0) {
                 $errors[] = "Adresse email déjà utilisée.";
             }
         }
     }
-
     // Chiffrement du mot de passe
     $password = "aq1" . sha1($password . "123") . "25";
-
-    // Secret
+    // Code unique
     $code_unique = sha1($email) . time();
     $code_unique = sha1($code_unique) . time();
-
     if (count($errors) === 0) {
     // Ajouter un utilisateur
     $req = $bdd->prepare('INSERT INTO users(first_name, last_name, email, password, code_unique) VALUES(?, ?, ?, ?, ?)');
     $req->execute([$first_name, $last_name, $email, $password, $code_unique]);
-
     header('location: connexion.php?success=1');
         exit();
     }
 }
-
 ob_start();
 ?>
 
@@ -71,7 +56,6 @@ ob_start();
         <h2 class="card-heading text-center">
             Inscription
         </h2>
-
         <form class="card-form flexColumn p2" method="post" action="inscription.php">
             <div class="input flexColumn">
                 <label for="first_name" class="input-label text-center">Votre Prénom</label>
@@ -110,10 +94,7 @@ ob_start();
     </div>
 </section>
 
-
-
 <?php
 $content = ob_get_clean();
-
 require('base.php');
 ?>

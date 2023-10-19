@@ -1,15 +1,12 @@
 <?php
 session_start();
-
 require_once('src/bdd.php');
 require_once('src/parametre.php');
-
 $title = "Accueil";
-
 ?>
+
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title><?= $title ?> | ARCC</title>
@@ -24,7 +21,6 @@ $title = "Accueil";
     <meta name="theme-color" content="#ffffff">
     <script src="https://cdn.tiny.cloud/1/eerzdp30ehig6yl7bqqz0yp0mmveajbvuw72h8pz9u7fwvrq/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
-
 <body class="bg-primary text-dark">
     <header class="header flexCenter w-100 mx-0">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -37,9 +33,7 @@ $title = "Accueil";
         </nav>
     </header>
     <section class="container">
-
         <h2 class="text-center">Bonjour et Bienvenue</h2>
-        
         <div class="flexColumn container">
             <p>
                 Ce blog vous montre les bénéfices pour vous de changer votre mode de paiement actuel par cartes-cadeaux.
@@ -53,7 +47,7 @@ $title = "Accueil";
             <p class="pt-3">Deux possibilités s'offrent à vous :<br>
             <ul class="flex gap-4">
                 <li>Soit utilisez le bouton rouge (Inscription) pour voir comment vous pouvez améliorer votre futur.</li>
-                <li>Soit utilisez le bouton bleu (Connexion) pour trouver toutes les nouvelles en rapport avec le système de cartes-cadeaux.</li>
+                <li>Soit utilisez le bouton bleu (Connexion) pour trouver toutes les nouvelles en rapport avec le système des cartes-cadeaux.</li>
             </ul>
             </p>
             <div class="flexRow my-5">
@@ -68,5 +62,4 @@ $title = "Accueil";
         </div>
     </footer>
 </body>
-
 </html>

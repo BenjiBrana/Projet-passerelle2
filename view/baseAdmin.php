@@ -13,6 +13,21 @@
     <link rel="mask-icon" href="../public/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <script src="https://cdn.tiny.cloud/1/eerzdp30ehig6yl7bqqz0yp0mmveajbvuw72h8pz9u7fwvrq/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script>
+        tinymce.init({
+            selector: '#description',
+            plugins: "  searchreplace autolink directionality  visualblocks visualchars image link media  codesample table charmap pagebreak nonbreaking anchor  insertdatetime advlist lists  wordcount   help   charmap  emoticons   autosave",
+            toolbar: "undo redo print spellcheckdialog formatpainter | blocks fontfamily fontsize | bold italic underline forecolor backcolor | link image | alignleft aligncenter alignright alignjustify lineheight | checklist bullist numlist indent outdent | removeformat",
+        });
+
+        function tinyTextarea() {
+            tinyMCE.get('description').getContent({
+                format: 'html'
+            });
+        }
+    </script>
 </head>
 
 <body class="bg-primary text-dark">

@@ -6,7 +6,7 @@ $theme-colors: (
     "success": rgb(61, 226, 61),
     "danger": rgb(248, 66, 66),
     "warning": rgb(247, 247, 78),
-    "dark": #112d4e,
+    "dark": #112d4e
 );
 
 $input-btn-padding-y-lg: 1rem;
@@ -89,8 +89,8 @@ body {
     align-content: space-between;
 }
 li {
-    list-style:none;
-  }
+    list-style: none;
+}
 
 b {
     color: $persoGold;
@@ -159,7 +159,6 @@ b {
     padding: 1rem;
     margin-bottom: 1rem;
     font-size: 1.1rem;
-    
 }
 .navbar-items {
     display: flex;
@@ -208,10 +207,26 @@ hr {
     width: 75vw;
 }
 
-.btnAccueil{
+.btnAccueil {
     margin-top: 0;
 }
-
+.commentaire {
+    height: 40px;
+    width: 60px;
+    position: relative;
+    margin: 1rem;
+    background-image: url(../../assets/img_article/logo_commentaire.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+}
+.nombreCommentaire {
+    position: absolute;
+    bottom: 0.1rem;
+    left: 4rem;
+    font-size: 2rem;
+}
 .card {
     width: 70%;
     background: $persoWhite;
@@ -264,19 +279,17 @@ hr {
     }
 }
 
-.form-actions{
+.form-actions {
     width: 50%;
-    :nth-child(1),:nth-child(2){
+    :nth-child(1),
+    :nth-child(2) {
         font-size: 2rem;
         flex: 1;
     }
-    
 }
 .btn-group {
     justify-content: space-around;
 }
-
-
 
 .modal-footer {
     @include flexRow();
@@ -294,6 +307,9 @@ a[href*="article.php"] {
     text-decoration: none;
 }
 
+.table {
+    border-radius: 2rem;
+}
 .titre-tab {
     display: flex;
     th {
@@ -304,9 +320,9 @@ a[href*="article.php"] {
 tr {
     display: flex;
     align-items: stretch;
-    :nth-of-type(2) {
-        flex: 2;
-    }
+    // :nth-of-type(2) {
+    //     flex: 2;
+    // }
     td {
         width: 100%;
         @include flexCenter();
@@ -341,7 +357,7 @@ tr {
 }
 
 @media only screen and (max-width: 800px) {
-    .container h2{
+    .container h2 {
         font-size: 3rem;
     }
     .card-systeme {
@@ -357,7 +373,7 @@ tr {
     .table-bordered > :not(caption) > * > * {
         border: 0.1rem solid #7574745a;
     }
-    
+
     .tab {
         display: grid;
         margin-top: 2rem;
@@ -386,13 +402,13 @@ tr {
         }
     }
 
-    .form-actions{
+    .form-actions {
         width: 75%;
-        :nth-child(1),:nth-child(2){
+        :nth-child(1),
+        :nth-child(2) {
             font-size: 2rem;
             flex: 1;
         }
-        
     }
 
     //menu
@@ -400,14 +416,14 @@ tr {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        :nth-child(1){
+        :nth-child(1) {
             order: 1;
             flex: 1;
         }
-        :nth-child(2){
+        :nth-child(2) {
             order: 3;
         }
-        :nth-child(3){
+        :nth-child(3) {
             order: 2;
         }
     }
@@ -426,15 +442,15 @@ tr {
         transition: all 0.5s ease-in-out;
         justify-content: start;
         padding-left: 0;
-        :nth-child(1){
+        :nth-child(1) {
             order: 1;
             flex: 0;
         }
-        :nth-child(2){
+        :nth-child(2) {
             order: 2;
             flex: 0;
         }
-        :nth-child(3){
+        :nth-child(3) {
             order: 3;
             flex: 0;
         }
@@ -475,9 +491,13 @@ tr {
         padding-left: 2rem;
         letter-spacing: 5px;
         color: #b8860b;
-        text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px,
-            rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px,
-            rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px,
+        text-shadow:
+            rgb(0, 0, 0) 1px 0px 0px,
+            rgb(0, 0, 0) 0.540302px 0.841471px 0px,
+            rgb(0, 0, 0) -0.416147px 0.909297px 0px,
+            rgb(0, 0, 0) -0.989992px 0.14112px 0px,
+            rgb(0, 0, 0) -0.653644px -0.756802px 0px,
+            rgb(0, 0, 0) 0.283662px -0.958924px 0px,
             rgb(0, 0, 0) 0.96017px -0.279415px 0px;
         background-color: gray;
         border: 1px solid whitesmoke;

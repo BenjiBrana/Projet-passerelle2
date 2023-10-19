@@ -2,22 +2,9 @@
 session_start();
 require_once('../src/bdd.php');
 require_once('../src/parametre.php');
-
+require('../admin/function.php');
 $title = "Article";
 ob_start();
-
-function verifier($data)
-{
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-
-function nettoyerCommentaire($commentaire)
-{
-    return strip_tags($commentaire);
-}
 
 if (isset($_GET['id']) and !empty($_GET['id'])) {
     $articleId = $_GET['id'];
@@ -98,6 +85,7 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
             </div>
             <form class="container flexCenter mt-5 text-center" role="form" method="post" enctype="multipart/form-data">
                 <textarea class="form-control my-5 mx-auto" name="commentaire" id="commentaire" cols="30" rows="10" placeholder="Commentez ici"></textarea>
+                
 
                 <div class="form-actions pb-5">
                     <button type="submit" name="publier" class="btn btn-success btn-lg">Publier</button>
