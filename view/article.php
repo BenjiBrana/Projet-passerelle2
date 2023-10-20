@@ -54,7 +54,8 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
             <img class="card-img-top mx-auto d-block border border-dark" src="<?php echo '../public/assets/img_article/' . $image_article; ?>" alt="Image article">
             <div class="card-body p-5 flexCenter">
                 <h2 class="text-center mt-5"><?= $name_article ?></h2>
-                <p class="card-text w-75 mb-auto"><?= $description_article ?>.</p>
+                <p class="card-text w-75 mb-auto"><?= html_entity_decode($description_article) ?>.</p>
+
             </div>
         </div>
 
