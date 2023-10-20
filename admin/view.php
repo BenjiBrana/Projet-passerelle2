@@ -10,13 +10,13 @@ if (!empty($_GET['id'])) {
     $id = htmlspecialchars($_GET['id']);
     $article = rechercheArticle($id);
 ?>
-    <div class="container my-5 border">
+    <div class="container my-5">
         <h1 class="my-5"><strong>VISUALISER L'ARTICLE</strong></h1>
         <div class="flexColumn w-100">
             <div class="card flex w-100 p-3 ">
                 <div class="my-4">
                     <label>Image:</label>
-                    <img class="card-img-top mx-auto d-block border border-dark" src="<?php echo '../public/assets/img_article/' . $article['image']; ?>" alt="Image article">
+                    <img class="card-img-top mx-auto d-block border" src="<?php echo '../public/assets/img_article/' . $article['image']; ?>" alt="Image article">
                 </div>
                 <div class="my-4">
                     <label> Titre:</label>

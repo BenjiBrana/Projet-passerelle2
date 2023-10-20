@@ -30,7 +30,7 @@ ob_start();
 
             <div class="card flex">
                 <a href="article.php?id=<?= $article['id_article']; ?>">
-                    <img class="card-img-top mx-auto d-block border border-dark" src="<?php echo '../public/assets/img_article/' . $article['image']; ?>" alt="Image article">
+                    <img class="card-img-top mx-auto d-block border" src="<?php echo '../public/assets/img_article/' . $article['image']; ?>" alt="Image article">
                     <div class="card-body p-5 flexCenter">
                         <h2 class="text-center mt-5"><?= $article['name'] ?></strong>
                         </h2>
